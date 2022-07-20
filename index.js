@@ -2,8 +2,9 @@
 function ip1(){
     var num = document.getElementById("number").value;
     var isprime;
-    for (let i = 2 ; i <= num ; i++) {
-        isprime =1;
+    var content ='';
+    for (let i = 2 ; i < num ; i++) {
+       isprime = 1;
         for (let j =2 ; j < i ; j++) {
             if (i% j === 0 ){
                 isprime = 0;
@@ -11,7 +12,9 @@ function ip1(){
             } 
         }
         if(isprime === 1){
-            document.getElementById("Pri").value = (i);
+            content += i + '  ';
+            console.log(i);
+            document.getElementById("result").innerHTML= (content);
         }
     }
 }
